@@ -206,8 +206,27 @@ jQuery(document).ready(function($) {
 	  });
 
 	$(function(){
-		$('.close').click(function(){
+		$('.close-btn').click(function(){
 			$('.popBg').hide();
 		})
 	});
+
+	$(function(){
+		$('.fa-x').click(function(){
+			$('.loginBg').hide();
+			$('.regist').hide();
+		})
+	});
+
+	$(function(){
+		$('.icon-person').click(function(){
+			$('.loginBg').show();
+		})
+	});
+
+	$(function(){
+		$('.join').click(function(){
+			$('.regist').show();
+		})
+	})
 });
