@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+    border-radius: 5px;
+  }
+   
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    /* background-color: transparent; */
+  }
+
+  section {
+    padding: 0 100px;
+    background: url(../images/men.jpg);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+   
+  .login-form {
+      position: relative;
+      width: 300px;
+      background-color: none;
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 50px;
+      padding: 20px;
+      text-align: center;
+      justify-content: center;
+      border: none;
+      
+  }
+   
+  .text-field {
+        font-size: 14px;
+        padding: 10px;
+        border: none;
+        width: 260px;
+        margin-bottom: 10px;
+   
+  }
+   
+  .submit-btn {
+    font-size: 14px;
+    border: none;
+    padding: 10px;
+    width: 260px;
+    background-color: #1BBC9B;
+    margin-bottom: 30px;
+    color: white;
+  }
+   
+  .links {
+      text-align: center;
+  }
+   
+  .links a {
+    font-size: 12px;
+    color: #9B9B9B;
+  }
+  .login-form .loginApi {
+    width: 250px;
+    height: 45px;
+  }

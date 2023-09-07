@@ -204,4 +204,10 @@ jQuery(document).ready(function($) {
 		  $(".banner").stop().animate({"top":position+currentPosition+"px"},800);
 		});
 	  });
+
+	$(function(){
+		$('.close').click(function(){
+			$('.popBg').hide();
+		})
+	});
 });
