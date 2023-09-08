@@ -72,6 +72,7 @@
   .login-form .loginApi {
     width: 250px;
     height: 45px;
+    margin: 3px;
   }
   
   .fa-regular .fa-x {
@@ -79,4 +80,5 @@
     text-decoration: none;
     font-size: 16px;
     color: white;
+    margin-top: 10px;
   }

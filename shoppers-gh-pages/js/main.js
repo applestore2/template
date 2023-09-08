@@ -197,6 +197,7 @@ jQuery(document).ready(function($) {
 	};
 	siteMagnificPopup();
 
+	// 스크롤을 내릴때 배너단이 따라오는 기능
 	$(document).ready(function(){
 		var currentPosition = parseInt($(".banner").css("top"));
 		$(window).scroll(function() {
@@ -205,12 +206,44 @@ jQuery(document).ready(function($) {
 		});
 	  });
 
-	$(function(){
+	//페이지로드시 function 실행
+	$(document).ready(function() {
+		getCookieSecretCouponPopup();
+	 }); 
+  
+	 //쿠키값이 있는지 확인하여 팝업창 show, hide 처리.
+	 function getCookieSecretCouponPopup () {
+		var cookiedata = document.cookie;
+		if ( cookiedata.indexOf("popup_secret_coupon=done") < 0 ){
+		   $('.popBg').show();
+		}
+		else {
+		   $('.popBg').hide();
+		}
+	 }
+  
+	 //쿠키데이터 설정 function 
+	 function setCookie( name, value, expiredays ) {
+		var todayDate = new Date();
+		todayDate.setDate( todayDate.getDate() + expiredays );
+		document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";";
+	 }
+  
+	 $(function(){
 		$('.close-btn').click(function(){
-			$('.popBg').hide();
+		   $('.popBg').hide();
 		})
-	});
+	 });
+  
+	 $(function(){
+		$('.ck').click(function(){
+		   setCookie('popup_secret_coupon','done',1);
+		   $('.popBg').css("display","none"); 
+		   $('.popBg').hide();
+		})
+	 });
 
+	// .fa-x 아이콘을 누르면 창을 숨기는 기능
 	$(function(){
 		$('.fa-x').click(function(){
 			$('.loginBg').hide();
@@ -218,15 +251,23 @@ jQuery(document).ready(function($) {
 		})
 	});
 
+	// icon-person을 누르면 로그인 창으로 이동
 	$(function(){
 		$('.icon-person').click(function(){
 			$('.loginBg').show();
 		})
 	});
 
+	// 로그인 창에서 회원가입을 누르면 회원가입 폼으로 이동
 	$(function(){
 		$('.join').click(function(){
 			$('.regist').show();
 		})
-	})
+	});
+
+	$(function(){
+		$('.next').click(function(){
+			$('.userInfo').show()
+		})
+	});
 });
