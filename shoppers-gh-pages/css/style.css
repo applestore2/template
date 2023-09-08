@@ -763,6 +763,7 @@ a {
     margin-top:-50px;
     margin-right: 185px;
     right:0;
+    z-index: 10;
   }
   
   /* popup */

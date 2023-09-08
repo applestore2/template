@@ -67,13 +67,12 @@
             <input type="text" class="regist_2 number" style="width: 70px;"> - 
             <input type="text" class="regist_2 number" style="width: 70px;"> - 
             <input type="text" class="regist_2 number" style="width: 70px;"><br>
-            주소 &nbsp;<input type="text" class="regist_2 zipCode" style="width: 100px;"> &nbsp;
-            <button><span class="zipSearch">우편번호검색</span></button>
-            <input type="text" class="regist_2 zipCode1" style="width: 270px;">
-            <input type="text" class="regist_2 zipCode2" style="width: 270px;"><br>
+            <input type="text" id="zip-code" placeholder="우편번호" style="width: 145px;">
+            <input type="button" class="zipSearch" onclick="execDaumPostcode()" value="우편번호 찾기">
+            <input type="text" id="address-1" class="regist_2 txt_addr" placeholder="도로명주소" style="width: 270px;">
+            <input type="text" id="address-2" class="regist_2 zipCode" placeholder="상세주소" style="width: 270px;"><br>
             <button><a hrdf="#" class="regist_2 next">다음</a></button>
           </form>
-          <a href="#" class="fa-regular fa-x"></a>
         </div>
       </div>
     
@@ -81,49 +80,47 @@
     <div class="userInfo">
       <div class="userInfo1">
         <form>
-          <h3>설문지</h3><br>
-          <span >발 사이즈</span><input type="text" class="foot footSize"><br>
-          <span >신어본 신발</span><input type="text" class="foot shoes"><br>
-          <label for="ice-cream-choice">긍정적인 신발</label>
-          <input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
+          <h3>설문지</h3>
+          <p><span >발 사이즈</span><input type="text" class="foot footSize"></p>
+          <p><span >신어본 신발</span><input type="text" class="foot shoes"></p>
+          <p><label for="ice-cream-choice">긍정적인 신발</label>
+            <input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
+  
+            <datalist id="ice-cream-flavors">
+              <option value="NIKE"></option>
+              <option value="ADIDAS"></option>
+              <option value="VANS"></option>
+              <option value="CONVERSE"></option>
+              <option value="FILA"></option>
+            </datalist></p>
 
-          <datalist id="ice-cream-flavors">
-            <option value="NIKE"></option>
-            <option value="ADIDAS"></option>
-            <option value="VANS"></option>
-            <option value="CONVERSE"></option>
-            <option value="FILA"></option>
-          </datalist>
+          <p><label for="ice-cream-choice">부정적인 신발</label>
+            <input list="ice-cream-flavors1" id="ice-cream-choice1" name="ice-cream-choice1" />
+  
+            <datalist id="ice-cream-flavors1">
+              <option value="NIKE"></option>
+              <option value="ADIDAS"></option>
+              <option value="VANS"></option>
+              <option value="CONVERSE"></option>
+              <option value="FILA"></option>
+            </datalist></p>
 
-          <br>
-          <label for="ice-cream-choice">부정적인 신발</label>
-          <input list="ice-cream-flavors1" id="ice-cream-choice1" name="ice-cream-choice1" />
-
-          <datalist id="ice-cream-flavors1">
-            <option value="NIKE"></option>
-            <option value="ADIDAS"></option>
-            <option value="VANS"></option>
-            <option value="CONVERSE"></option>
-            <option value="FILA"></option>
-          </datalist>
-
-          <br>
-          <label for="ice-cream-choice">선호 하는 신발 종류</label>
-          <input list="ice-cream-flavors2" id="ice-cream-choice2" class="foot" name="ice-cream-choice2" />
-
-          <datalist id="ice-cream-flavors2">
-            <option value="로우탑"></option>
-            <option value="미들탑"></option>
-            <option value="하이탑"></option>
-            <option value="구두"></option>
-            <option value="스니커즈"></option>
-            <option value="캔버스화"></option>
-            <option value="운동화"></option>
-            <option value="워커"></option>
-            <option value="크록스"></option>
-            <option value="샌들"></option>
-            <option value="슬리퍼"></option>
-          </datalist>
+          <p><label for="ice-cream-choice">선호 하는 신발 종류</label>
+            <input list="ice-cream-flavors2" id="ice-cream-choice2" class="foot" name="ice-cream-choice2" />
+  
+            <datalist id="ice-cream-flavors2">
+              <option value="로우탑"></option>
+              <option value="미들탑"></option>
+              <option value="하이탑"></option>
+              <option value="구두"></option>
+              <option value="스니커즈"></option>
+              <option value="캔버스화"></option>
+              <option value="운동화"></option>
+              <option value="워커"></option>
+              <option value="크록스"></option>
+              <option value="샌들"></option>
+              <option value="슬리퍼"></option>
+            </datalist></p>
           <button><a href="#" class="membership">회원가입</a></button>
         </form>
       </div>
@@ -490,8 +487,7 @@
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/aos.js"></script>
-
   <script src="js/main.js"></script>
-
+  <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
   </body>
 </html>
