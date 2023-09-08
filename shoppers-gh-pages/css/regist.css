@@ -20,6 +20,10 @@
     text-align: center;
   }
 
+  .regist2{
+    margin-top: 30px;
+  }
+
   .regist_2 {
     margin: 5px;
   }
@@ -36,6 +40,36 @@
   }
   
   .userInfo1{
+    width: 400px;
+    height: 450px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .userInfo2{
+    margin-top: 30px;
+  }
+
+  .survey {
+    margin-left: 30px;
+  }
+
+  .ball_of_foot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    z-index: 10;
+    display: none;
+  }
+  
+  .ball_of_foot_1{
     width: 400px;
     height: 450px;
     background: #fff;

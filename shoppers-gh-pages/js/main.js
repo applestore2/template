@@ -265,12 +265,14 @@ jQuery(document).ready(function($) {
 		})
 	});
 
+	// 회원가입 폼에서 다음 버튼을 누르면 설문지로 이동
 	$(function(){
 		$('.next').click(function(){
 			$('.userInfo').show()
 		})
 	});
 
+	// 우편번호 받아오는 JS 코드
 	$(function(){
 		$('.zipSearch').click(function execDaumPostcode() {
 				new daum.Postcode( {
@@ -282,9 +284,19 @@ jQuery(document).ready(function($) {
 			})
 	});
 
+	// 설문지 창에서 이전을 누르면 회원가입 폼으로 이동
 	$(function(){
 		$('.membership').click(function(){
-			$('.loginBg').show()
+			$('.regist').show()
 		})
 	});
+
+	// 설문지 창에서 다음을 누르면 긍/부정 신발 설문조사로 이동
+	$(function(){
+		$('.membership1').click(function(){
+			$('.ball_of_foot').show()
+		})
+	});
+
+
 });
